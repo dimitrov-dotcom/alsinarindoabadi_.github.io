@@ -1,10 +1,10 @@
-/* ================= ROOT COLOR ================= */
+/* ================= ROOT ================= */
 :root{
   --primary:#0A2E57;
   --secondary:#123E7A;
   --accent:#C9A24D;
   --light:#F8FAFC;
-  --dark:#0F172A;
+  --dark:#020617;
   --muted:#64748B;
 }
 
@@ -18,26 +18,16 @@
 body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;
   background:var(--light);
-  color:var(--dark);
+  color:#0f172a;
   line-height:1.7;
-  transition:background .3s,color .3s;
+  transition:.3s;
 }
 
 /* ================= LAYOUT ================= */
-.section{
-  padding:90px 20px;
-}
-.container{
-  max-width:1100px;
-  margin:auto;
-}
-.narrow{
-  max-width:780px;
-  margin:auto;
-}
-.center{
-  text-align:center;
-}
+.section{ padding:90px 20px; }
+.container{ max-width:1100px; margin:auto; }
+.narrow{ max-width:780px; margin:auto; }
+.center{ text-align:center; }
 
 /* ================= NAVBAR ================= */
 .nav{
@@ -49,14 +39,14 @@ body{
   justify-content:space-between;
   padding:14px 22px;
   background:#fff;
-  box-shadow:0 6px 25px rgba(0,0,0,.08);
-  transition:all .3s ease;
+  box-shadow:0 8px 30px rgba(0,0,0,.08);
+  transition:.3s;
 }
 
 .nav.scrolled{
-  padding:6px 18px;
-  backdrop-filter:blur(10px);
+  padding:8px 20px;
   background:rgba(255,255,255,.9);
+  backdrop-filter:blur(10px);
 }
 
 .brand{
@@ -74,13 +64,13 @@ body{
 
 nav ul{
   display:flex;
-  list-style:none;
   gap:22px;
+  list-style:none;
 }
 
 nav a{
   text-decoration:none;
-  color:var(--dark);
+  color:#0f172a;
   font-weight:500;
   position:relative;
 }
@@ -95,22 +85,20 @@ nav a::after{
   background:var(--accent);
   transition:.3s;
 }
-nav a:hover::after{
-  width:100%;
-}
+
+nav a:hover::after{ width:100%; }
 
 .lang-btn{
   background:none;
   border:1px solid var(--accent);
   padding:6px 10px;
   border-radius:8px;
-  cursor:pointer;
   font-weight:600;
+  cursor:pointer;
 }
 
 /* ================= HERO ================= */
 .hero{
-  position:relative;
   min-height:85vh;
   display:flex;
   flex-direction:column;
@@ -126,39 +114,38 @@ nav a:hover::after{
 
   background-repeat:no-repeat;
   background-position:center;
-  background-size:420px;        /* LOGO TENGAH BESAR */
+  background-size:420px;
   background-blend-mode:soft-light;
 }
 
-/* MATIKAN IMG LOGO HERO */
-.hero-logo{
-  display:none !important;
-}
+/* MATIKAN IMG HERO */
+.hero-logo{ display:none !important; }
 
 .hero h1{
-  font-size:40px;
+  font-size:42px;
   margin-bottom:10px;
 }
+
 .hero p{
   max-width:600px;
   color:#e5e7eb;
 }
 
-/* CTA */
 .cta{
   margin-top:30px;
-  background:linear-gradient(135deg,var(--accent),#e6c46a);
-  color:#111;
   padding:14px 34px;
   border-radius:999px;
+  background:linear-gradient(135deg,var(--accent),#e6c46a);
+  color:#111;
   font-weight:600;
   text-decoration:none;
-  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  box-shadow:0 15px 35px rgba(0,0,0,.3);
   transition:.3s;
 }
+
 .cta:hover{
   transform:translateY(-3px);
-  box-shadow:0 18px 45px rgba(0,0,0,.35);
+  box-shadow:0 22px 55px rgba(0,0,0,.45);
 }
 
 /* ================= TITLES ================= */
@@ -167,6 +154,7 @@ h2{
   color:var(--primary);
   margin-bottom:25px;
 }
+
 h3{
   color:var(--primary);
   margin-bottom:10px;
@@ -175,34 +163,51 @@ h3{
 /* ================= SERVICES ================= */
 .services-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:26px;
   margin-top:40px;
 }
 
 .service-card{
+  position:relative;
   background:#fff;
-  padding:30px 25px;
+  padding:32px 25px;
   border-radius:18px;
   text-align:center;
   font-weight:600;
   box-shadow:0 15px 40px rgba(0,0,0,.08);
   transition:.3s;
+  overflow:hidden;
 }
+
 .service-card:hover{
   transform:translateY(-6px);
-  box-shadow:0 25px 60px rgba(0,0,0,.12);
+  box-shadow:0 28px 60px rgba(0,0,0,.15);
+}
+
+/* GARIS KUNING DI BAWAH */
+.service-card::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:5px;
+  background:linear-gradient(90deg,var(--accent),#e6c46a);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:.35s ease;
+}
+
+.service-card:hover::after{
+  transform:scaleX(1);
 }
 
 /* ================= ABOUT ================= */
-.alt{
-  background:#fff;
-}
-.alt p{
-  color:var(--muted);
-}
+.alt{ background:#fff; }
+.alt p{ color:var(--muted); }
 
-/* ================= VISION & MISSION ================= */
+/* ================= VISI MISI ================= */
 .vm-section{
   background:linear-gradient(180deg,#f8fafc,#eef2f7);
 }
@@ -215,17 +220,18 @@ h3{
 
 .vm-card{
   background:#fff;
-  padding:30px;
+  padding:32px;
   border-radius:18px;
-  box-shadow:0 20px 40px rgba(0,0,0,.08);
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
   transition:.3s;
 }
-.vm-card:hover{
-  transform:translateY(-6px);
-}
+
+.vm-card:hover{ transform:translateY(-6px); }
+
 .vm-card.accent{
   border-top:6px solid var(--accent);
 }
+
 .vm-card p,
 .vm-card li{
   color:var(--muted);
@@ -237,6 +243,7 @@ h3{
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:22px;
 }
+
 .gallery-grid img{
   width:100%;
   max-height:240px;
@@ -244,6 +251,7 @@ h3{
   border-radius:16px;
   transition:.35s;
 }
+
 .gallery-grid img:hover{
   transform:scale(1.04);
   box-shadow:0 25px 50px rgba(0,0,0,.25);
@@ -258,15 +266,16 @@ h3{
 }
 
 .btn{
-  background:var(--primary);
-  color:#fff;
   padding:12px 26px;
   border-radius:10px;
+  background:var(--primary);
+  color:#fff;
   text-decoration:none;
   font-weight:600;
 }
+
 .btn.outline{
-  background:transparent;
+  background:none;
   border:2px solid var(--primary);
   color:var(--primary);
 }
@@ -286,6 +295,7 @@ footer{
   transform:translateY(50px);
   transition:1s;
 }
+
 .reveal.active{
   opacity:1;
   transform:none;
@@ -296,56 +306,45 @@ body.dark{
   background:#020617;
   color:#e5e7eb;
 }
-body.dark .nav{
+
+body.dark .nav,
+body.dark .nav.scrolled{
   background:rgba(2,6,23,.9);
 }
-body.dark .nav.scrolled{
-  background:rgba(2,6,23,.85);
-}
-body.dark nav a{
-  color:#e5e7eb;
-}
-body.dark .section,
-body.dark .alt,
-body.dark .vm-section{
-  background:#020617;
-}
+
+body.dark nav a{ color:#e5e7eb; }
+
 body.dark .service-card,
 body.dark .vm-card{
   background:#020617;
-  box-shadow:0 15px 40px rgba(0,0,0,.6);
+  box-shadow:0 20px 45px rgba(0,0,0,.6);
 }
-body.dark footer{
-  background:#000;
-}
+
+body.dark footer{ background:#000; }
 
 /* ================= RESPONSIVE ================= */
-.hamburger{
-  display:none;
-}
+.hamburger{ display:none; }
 
 @media(max-width:768px){
-  nav ul{
-    display:none;
-  }
+  nav ul{ display:none; }
+
   .hamburger{
     display:flex;
     flex-direction:column;
     gap:4px;
     cursor:pointer;
   }
+
   .hamburger span{
     width:25px;
     height:3px;
     background:#333;
   }
 
-  .hero h1{
-    font-size:30px;
-  }
+  .hero h1{ font-size:30px; }
 
   .hero{
-    background-size:260px;   /* LOGO TENGAH MOBILE */
+    background-size:260px;
   }
 
   .vm-grid{
