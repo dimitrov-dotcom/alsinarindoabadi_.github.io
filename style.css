@@ -110,9 +110,11 @@ nav a:hover::after{ width:100%; }
 }
 
 .hero-logo{
-  max-width:120px;
-  margin-bottom:20px;
-  filter:drop-shadow(0 10px 25px rgba(0,0,0,.3));
+  max-width:220px;          /* BESAR */
+  width:100%;
+  height:auto;
+  margin-bottom:28px;
+  filter:drop-shadow(0 18px 40px rgba(0,0,0,.35));
 }
 
 .hero h1{ font-size:40px; margin-bottom:10px; }
@@ -300,4 +302,18 @@ body.dark footer{ background:#000; }
 
 body.dark .nav.scrolled{
   background:rgba(2,6,23,.9);
+}
+@media(max-width:768px){
+  .hero-logo{
+    max-width:160px;        /* Pas untuk HP */
+  }
+}
+@keyframes floatLogo{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-8px); }
+  100%{ transform:translateY(0); }
+}
+
+.hero-logo{
+  animation:floatLogo 5s ease-in-out infinite;
 }
