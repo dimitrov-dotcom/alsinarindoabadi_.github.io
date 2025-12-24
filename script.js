@@ -2,8 +2,8 @@ function toggleMenu(){
   document.getElementById("menu").classList.toggle("show");
 }
 
-window.addEventListener("scroll",()=>{
-  document.querySelectorAll(".reveal").forEach(el=>{
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".reveal").forEach(el => {
     if(el.getBoundingClientRect().top < window.innerHeight - 100){
       el.classList.add("active");
     }
