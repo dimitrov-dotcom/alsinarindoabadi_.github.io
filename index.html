@@ -3,178 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>PT Alsinar Indo Abadi | General Supplier & Contractor</title>
-
-  <meta name="description"
-        content="PT Alsinar Indo Abadi adalah perusahaan General Supplier & Contractor, jasa konstruksi gedung, dan pengelolaan scrap iron profesional di Indonesia.">
-
-  <meta name="keywords"
-        content="PT Alsinar Indo Abadi, General Supplier, Contractor, Scrap Iron, Jasa Konstruksi Gedung">
-
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://dimitrov-dotcom.github.io/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="PT Alsinar Indo Abadi">
-  <meta property="og:description" content="Mitra profesional di bidang supplier, konstruksi, dan pengelolaan scrap iron.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dimitrov-dotcom.github.io/">
-  <meta property="og:image" content="https://dimitrov-dotcom.github.io/images/LOGOALSINAR.png">
-
+  <title>PT. ALSINAR INDO ABADI</title>
+  <meta name="description" content="PT. Alsinar Indo Abadi - General Supplier, Contractor, Scrap Iron & Catering">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "PT Alsinar Indo Abadi",
-    "url": "https://dimitrov-dotcom.github.io/",
-    "logo": "https://dimitrov-dotcom.github.io/images/LOGOALSINAR.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+62-813-4686-0886",
-      "contactType": "customer service"
-    }
-  }
-  </script>
 </head>
-
 <body>
 
-<header>
-  <div class="nav">
-    <div class="logo">
-      <img src="images/LOGOALSINAR.png" alt="Logo PT Alsinar Indo Abadi">
-      <div class="logo-text">
-        <strong>PT. ALSINAR INDO ABADI</strong>
-        <span>General Supplier & Contractor</span>
+  <!-- NAVBAR -->
+  <header>
+    <div class="nav">
+      <div class="logo-container">
+        <img src="images/LOGOALSINAR.png" alt="Logo PT. ALSINAR INDO ABADI" id="logo-img">
+        <div class="logo-text">
+          <strong id="logo-title">PT. ALSINAR INDO ABADI</strong>
+          <span id="logo-subtitle">General Supplier & Contractor</span>
+        </div>
+      </div>
+      <nav>
+        <ul id="menu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#vision">Visi & Misi</a></li>
+          <li><a href="#gallery">Galeri</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
       </div>
     </div>
+  </header>
 
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">Tentang</a></li>
-        <li><a href="#services">Layanan</a></li>
-        <li><a href="#vision">Visi & Misi</a></li>
-        <li><a href="#contact">Kontak</a></li>
-      </ul>
-    </nav>
+  <!-- HERO -->
+  <section id="hero" class="hero reveal">
+    <h1>Selamat Datang di PT. ALSINAR INDO ABADI</h1>
+    <p>Layanan profesional di General Supplier, Konstruksi, Scrap Iron & Catering</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="reveal">
+    <h2>Tentang Kami</h2>
+    <p>PT. ALSINAR INDO ABADI menyediakan layanan terpadu berkualitas tinggi dengan fokus pada kepuasan klien.</p>
+  </section>
+
+  <!-- VISION & MISSION -->
+  <section id="vision" class="reveal">
+    <h2>Visi & Misi</h2>
+    <h3>Visi</h3>
+    <p>Menjadi perusahaan penyedia layanan terpadu terpercaya dan unggul di berbagai bidang.</p>
+    <h3>Misi</h3>
+    <ul>
+      <li>Memberikan layanan terbaik di General Supplier & Contractor, konstruksi, scrap iron, dan catering.</li>
+      <li>Mengutamakan kepuasan klien melalui solusi efisien dan inovatif.</li>
+      <li>Membangun hubungan jangka panjang berbasis integritas dan transparansi.</li>
+      <li>Mendukung praktik bisnis berkelanjutan, khususnya pengelolaan scrap iron.</li>
+    </ul>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="reveal">
+    <h2>Galeri Proyek</h2>
+    <p class="gallery-desc">Dokumentasi beberapa proyek PT. ALSINAR INDO ABADI</p>
+    <div class="gallery-grid">
+      <img src="images/gallery/proyek1.jpg" alt="Proyek Konstruksi" onclick="openLightbox(this)">
+      <img src="images/gallery/proyek2.jpg" alt="Scrap Iron" onclick="openLightbox(this)">
+      <img src="images/gallery/proyek3.jpg" alt="Supplier Industri" onclick="openLightbox(this)">
+      <img src="images/gallery/proyek4.jpg" alt="Proyek Lapangan" onclick="openLightbox(this)">
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
   </div>
-</header>
 
-<!-- HERO -->
-<section id="hero">
-  <img src="images/LOGOALSINAR.png" alt="Logo PT Alsinar Indo Abadi" class="hero-logo">
-  <h1>PT. ALSINAR INDO ABADI</h1>
-  <p>Layanan Terpadu Profesional & Terpercaya</p>
-  <a href="#contact" class="btn-cta">Hubungi Kami</a>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section reveal">
-  <h2>Tentang Kami</h2>
-  <p>
-    PT Alsinar Indo Abadi merupakan perusahaan yang bergerak di bidang General Supplier & Contractor,
-    jasa konstruksi gedung, serta pengelolaan scrap iron dengan komitmen terhadap kualitas,
-    profesionalisme, dan keberlanjutan.
-  </p>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="section reveal">
-  <h2>Layanan Kami</h2>
-
-  <div class="service-grid">
-    <div class="service-card">
-      <h3>General Supplier & Contractor</h3>
-      <p>Penyediaan material dan jasa konstruksi dengan standar kualitas tinggi dan tepat waktu.</p>
+  <!-- CONTACT -->
+  <section id="contact" class="reveal">
+    <h2>Kontak Kami</h2>
+    <p>Hubungi kami langsung melalui WhatsApp atau email, atau kunjungi kantor kami:</p>
+    <div class="contact-grid">
+      <a href="https://wa.me/081346860886" target="_blank" class="btn">WhatsApp: 0813-4686-0886</a>
+      <a href="mailto:info@alsinar.com" class="btn">Email: info@alsinar.com</a>
     </div>
-
-    <div class="service-card">
-      <h3>Pengelolaan Scrap Iron</h3>
-      <p>Layanan pengambilan dan pengolahan limbah besi secara aman dan ramah lingkungan.</p>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE_HERE" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
+  </section>
 
-    <div class="service-card">
-      <h3>Jasa Konstruksi Gedung</h3>
-      <p>Pembangunan gedung perkantoran, industri, dan komersial dengan hasil yang kokoh dan bernilai jangka panjang.</p>
-    </div>
-  </div>
-</section>
-<!-- GALLERY -->
-<section id="gallery" class="section reveal">
-  <h2>Galeri Proyek</h2>
-  <p class="gallery-desc">
-    Dokumentasi beberapa proyek dan aktivitas PT Alsinar Indo Abadi
-  </p>
-
-  <div class="gallery-grid">
-  <img src="images/gallery/proyek1.jpg"
-       alt="Proyek Konstruksi PT Alsinar"
-       loading="lazy"
-       onclick="openLightbox(this)">
-
-  <img src="images/gallery/proyek2.jpg"
-       alt="Pengelolaan Scrap Iron"
-       loading="lazy"
-       onclick="openLightbox(this)">
-
-  <img src="images/gallery/proyek3.jpg"
-       alt="Proyek Supplier Industri"
-       loading="lazy"
-       onclick="openLightbox(this)">
-
-  <img src="images/gallery/proyek4.jpg"
-       alt="Proyek Lapangan"
-       loading="lazy"
-       onclick="openLightbox(this)">
-</div>
-</section>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
-</div>
-<!-- VISION -->
-<section id="vision" class="section reveal">
-  <h2>Visi & Misi</h2>
-
-  <h3>Visi</h3>
-  <p>Menjadi perusahaan penyedia layanan terpadu yang terpercaya dan unggul di berbagai bidang.</p>
-
-  <h3>Misi</h3>
-  <ul>
-    <li>Memberikan layanan terbaik dengan standar kualitas tinggi</li>
-    <li>Mengutamakan kepuasan klien melalui solusi efisien dan inovatif</li>
-    <li>Membangun hubungan jangka panjang berbasis kepercayaan</li>
-    <li>Mengembangkan tim profesional dan kompeten</li>
-    <li>Mendukung praktik bisnis berkelanjutan</li>
-  </ul>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section reveal">
-  <h2>Hubungi Kami</h2>
-
-  <form action="https://formspree.io/f/xyzabcde" method="POST" class="contact-form">
-    <input type="text" name="nama" placeholder="Nama Lengkap" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="pesan" placeholder="Pesan Anda" required></textarea>
-    <button type="submit">Kirim Pesan</button>
-  </form>
-</section>
-
-<footer>
-  <p>© 2025 PT Alsinar Indo Abadi. All rights reserved.</p>
-</footer>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/6281346860886?text=Halo%20PT%20Alsinar%20Indo%20Abadi,%20saya%20ingin%20konsultasi."
-   class="wa-float" target="_blank">💬</a>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
