@@ -1,31 +1,56 @@
+/* =====================================================
+   NAVBAR SCROLL (SHRINK + BLUR)
+===================================================== */
+const navbar = document.querySelector(".nav");
 
-// MOBILE MENU
-function toggleMenu(){
-  const menu=document.getElementById("menu");
-  menu.style.display = menu.style.display==="flex"?"none":"flex";
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 60) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+/* =====================================================
+   MOBILE MENU (HAMBURGER)
+===================================================== */
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  if (menu.style.display === "flex") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "flex";
+  }
 }
-// ===== LIGHTBOX GALLERY =====
-document.querySelectorAll(".gallery-grid img").forEach(img=>{
-  img.addEventListener("click",()=>{
-    document.getElementById("lightbox-img").src = img.src;
-    document.getElementById("lightbox").style.display = "flex";
+
+/* =====================================================
+   LIGHTBOX GALLERY
+===================================================== */
+document.querySelectorAll(".gallery-grid img").forEach(img => {
+  img.addEventListener("click", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
   });
 });
 
-function closeLightbox(){
+function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
 }
-/* ================= SCROLL REVEAL ================= */
+
+/* =====================================================
+   SCROLL REVEAL (HALUS)
+===================================================== */
 const reveals = document.querySelectorAll(".reveal");
 
-function revealOnScroll(){
+function revealOnScroll() {
   const windowHeight = window.innerHeight;
   const revealPoint = 120;
 
-  reveals.forEach(el=>{
+  reveals.forEach(el => {
     const elementTop = el.getBoundingClientRect().top;
-
-    if(elementTop < windowHeight - revealPoint){
+    if (elementTop < windowHeight - revealPoint) {
       el.classList.add("active");
     }
   });
@@ -33,28 +58,21 @@ function revealOnScroll(){
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
-/* ================= NAVBAR SCROLL ================= */
-const navbar = document.querySelector('.nav');
 
-window.addEventListener('scroll', () => {
-  if(window.scrollY > 60){
-    navbar.classList.add('scrolled');
-  }else{
-    navbar.classList.remove('scrolled');
-  }
-});
-/* ================= TRANSLATIONS ================= */
+/* =====================================================
+   MULTI LANGUAGE (ID / EN + FLAG)
+===================================================== */
 const translations = {
   id: {
-    hero_title: "PT ALSINAR INDO ABADI",
-    hero_subtitle: "General Supplier & Contractor Terpercaya",
-    hero_cta: "Hubungi Kami",
-
     nav_home: "Home",
     nav_services: "Layanan",
     nav_about: "Tentang",
     nav_gallery: "Galeri",
     nav_contact: "Kontak",
+
+    hero_title: "PT ALSINAR INDO ABADI",
+    hero_subtitle: "General Supplier & Contractor Terpercaya",
+    hero_cta: "Hubungi Kami",
 
     services_title: "Layanan Kami",
     service_1: "General Supplier",
@@ -75,19 +93,21 @@ const translations = {
     mission_3: "Membangun hubungan jangka panjang berbasis integritas",
     mission_4: "Mendukung praktik bisnis berkelanjutan dan ramah lingkungan",
 
-    gallery_title: "Galeri Proyek"
+    gallery_title: "Galeri Proyek",
+    contact_title: "Kontak Kami",
+    contact_text: "Siap menjadi mitra strategis bisnis Anda."
   },
 
   en: {
-    hero_title: "PT ALSINAR INDO ABADI",
-    hero_subtitle: "Trusted General Supplier & Contractor",
-    hero_cta: "Contact Us",
-
     nav_home: "Home",
     nav_services: "Services",
     nav_about: "About",
     nav_gallery: "Gallery",
     nav_contact: "Contact",
+
+    hero_title: "PT ALSINAR INDO ABADI",
+    hero_subtitle: "Trusted General Supplier & Contractor",
+    hero_cta: "Contact Us",
 
     services_title: "Our Services",
     service_1: "General Supplier",
@@ -108,21 +128,32 @@ const translations = {
     mission_3: "Build long-term relationships based on integrity",
     mission_4: "Support sustainable and environmentally friendly business practices",
 
-    gallery_title: "Project Gallery"
+    gallery_title: "Project Gallery",
+    contact_title: "Contact Us",
+    contact_text: "Ready to become your strategic business partner."
   }
 };
 
-/* ================= LANGUAGE SWITCH ================= */
 function setLang(lang) {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.dataset.i18n;
     if (translations[lang][key]) {
-      el.innerText = translations[lang][key];
+      el.textContent = translations[lang][key];
     }
   });
+
+  // active flag
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.classList.remove("active");
+  });
+  document
+    .querySelector(`.lang-btn[onclick="setLang('${lang}')"]`)
+    ?.classList.add("active");
+
   localStorage.setItem("lang", lang);
 }
 
+// default language
 document.addEventListener("DOMContentLoaded", () => {
   setLang(localStorage.getItem("lang") || "id");
 });
