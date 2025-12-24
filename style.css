@@ -5,9 +5,10 @@
   font-family: Arial, sans-serif;
 }
 
+/* HEADER */
 header {
   background: #0a2a66;
-  padding: 15px 10%;
+  padding: 14px 10%;
 }
 
 .nav {
@@ -16,49 +17,84 @@ header {
   align-items: center;
 }
 
+/* LOGO NAVBAR */
 .logo {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 }
 
 .logo img {
-  width: 95px;   /* LOGO DIPERBESAR */
-  height: auto;
+  height: 60px;   /* LOGO NAVBAR BESAR */
+  width: auto;
 }
 
 .logo-text {
   color: #fff;
 }
 
-.logo-text span {
-  font-size: 13px;
-  opacity: 0.9;
+.logo-text strong {
+  font-size: 16px;
 }
 
+.logo-text span {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* NAV */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 22px;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
+/* HERO */
 #hero {
-  background: linear-gradient(to right, #0a2a66, #163f8f);
-  color: white;
-  padding: 100px 10%;
+  background: linear-gradient(135deg, #0a2a66, #163f8f);
+  color: #fff;
+  padding: 110px 10%;
   text-align: center;
 }
 
+.hero-logo {
+  width: 220px;              /* LOGO HERO BESAR */
+  margin-bottom: 25px;
+  filter: drop-shadow(0 10px 25px rgba(0,0,0,0.35));
+}
+
+#hero h1 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.btn-cta {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 32px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECTION */
 .section {
   padding: 80px 10%;
 }
 
+.section h2 {
+  margin-bottom: 20px;
+}
+
+/* SERVICES */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -67,18 +103,19 @@ nav a {
 }
 
 .service-card {
-  background: white;
+  background: #fff;
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 14px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
+/* CONTACT */
 .contact-form {
   max-width: 600px;
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
 }
 
 .contact-form input,
@@ -90,25 +127,27 @@ nav a {
 
 .contact-form button {
   background: #0a2a66;
-  color: white;
+  color: #fff;
   padding: 14px;
   border: none;
   border-radius: 8px;
 }
 
+/* FOOTER */
 footer {
   background: #0a2a66;
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 20px;
 }
 
+/* WHATSAPP */
 .wa-float {
   position: fixed;
   bottom: 25px;
   right: 25px;
   background: #25D366;
-  color: white;
+  color: #fff;
   font-size: 26px;
   width: 56px;
   height: 56px;
@@ -119,14 +158,25 @@ footer {
   text-decoration: none;
 }
 
-/* ANIMASI */
+/* ANIMASI SCROLL */
 .reveal {
   opacity: 0;
   transform: translateY(60px);
-  transition: 0.8s;
+  transition: 0.8s ease;
 }
 
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-logo {
+    width: 160px;
+  }
+
+  nav ul {
+    display: none;
+  }
 }
