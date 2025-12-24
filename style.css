@@ -1,4 +1,4 @@
-/* ================= ROOT COLOR SYSTEM ================= */
+/* ================= ROOT COLOR ================= */
 :root{
   --primary:#0A2E57;
   --secondary:#123E7A;
@@ -16,7 +16,7 @@
 }
 
 body{
-  font-family:'Inter',system-ui,sans-serif;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;
   background:var(--light);
   color:var(--dark);
   line-height:1.7;
@@ -24,10 +24,20 @@ body{
 }
 
 /* ================= LAYOUT ================= */
-.section{ padding:90px 20px; }
-.container{ max-width:1100px; margin:auto; }
-.narrow{ max-width:780px; margin:auto; }
-.center{ text-align:center; }
+.section{
+  padding:90px 20px;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+.narrow{
+  max-width:780px;
+  margin:auto;
+}
+.center{
+  text-align:center;
+}
 
 /* ================= NAVBAR ================= */
 .nav{
@@ -40,14 +50,13 @@ body{
   padding:14px 22px;
   background:#fff;
   box-shadow:0 6px 25px rgba(0,0,0,.08);
-  transition:padding .3s, background .3s, box-shadow .3s;
+  transition:all .3s ease;
 }
 
 .nav.scrolled{
-  padding:8px 22px;
+  padding:6px 18px;
   backdrop-filter:blur(10px);
-  background:rgba(255,255,255,.85);
-  box-shadow:0 10px 30px rgba(0,0,0,.12);
+  background:rgba(255,255,255,.9);
 }
 
 .brand{
@@ -58,7 +67,10 @@ body{
   color:var(--primary);
 }
 
-.nav-logo{ height:40px; width:auto; }
+.nav-logo{
+  height:40px;
+  width:auto;
+}
 
 nav ul{
   display:flex;
@@ -83,43 +95,56 @@ nav a::after{
   background:var(--accent);
   transition:.3s;
 }
-nav a:hover::after{ width:100%; }
+nav a:hover::after{
+  width:100%;
+}
 
-.lang-btn,
-#darkToggle{
+.lang-btn{
   background:none;
   border:1px solid var(--accent);
   padding:6px 10px;
   border-radius:8px;
-  margin-left:6px;
   cursor:pointer;
   font-weight:600;
 }
 
 /* ================= HERO ================= */
 .hero{
+  position:relative;
   min-height:85vh;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
-  color:#fff;
   padding:40px 20px;
+  color:#fff;
+
+  background:
+    linear-gradient(135deg,var(--primary),var(--secondary)),
+    url("images/LOGOALSINAR.png");
+
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:420px;        /* LOGO TENGAH BESAR */
+  background-blend-mode:soft-light;
 }
 
+/* MATIKAN IMG LOGO HERO */
 .hero-logo{
-  max-width:220px;          /* BESAR */
-  width:100%;
-  height:auto;
-  margin-bottom:28px;
-  filter:drop-shadow(0 18px 40px rgba(0,0,0,.35));
+  display:none !important;
 }
 
-.hero h1{ font-size:40px; margin-bottom:10px; }
-.hero p{ max-width:600px; color:#e5e7eb; }
+.hero h1{
+  font-size:40px;
+  margin-bottom:10px;
+}
+.hero p{
+  max-width:600px;
+  color:#e5e7eb;
+}
 
+/* CTA */
 .cta{
   margin-top:30px;
   background:linear-gradient(135deg,var(--accent),#e6c46a);
@@ -141,9 +166,11 @@ h2{
   font-size:28px;
   color:var(--primary);
   margin-bottom:25px;
-  text-align:center;
 }
-h3{ color:var(--primary); margin-bottom:10px; }
+h3{
+  color:var(--primary);
+  margin-bottom:10px;
+}
 
 /* ================= SERVICES ================= */
 .services-grid{
@@ -152,13 +179,14 @@ h3{ color:var(--primary); margin-bottom:10px; }
   gap:25px;
   margin-top:40px;
 }
+
 .service-card{
   background:#fff;
   padding:30px 25px;
   border-radius:18px;
   text-align:center;
-  box-shadow:0 15px 40px rgba(0,0,0,.08);
   font-weight:600;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
   transition:.3s;
 }
 .service-card:hover{
@@ -166,19 +194,25 @@ h3{ color:var(--primary); margin-bottom:10px; }
   box-shadow:0 25px 60px rgba(0,0,0,.12);
 }
 
-/* ================= ABOUT & ALT ================= */
-.alt{ background:#fff; }
-.alt p{ color:var(--muted); font-size:16px; }
+/* ================= ABOUT ================= */
+.alt{
+  background:#fff;
+}
+.alt p{
+  color:var(--muted);
+}
 
 /* ================= VISION & MISSION ================= */
 .vm-section{
   background:linear-gradient(180deg,#f8fafc,#eef2f7);
 }
+
 .vm-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:30px;
 }
+
 .vm-card{
   background:#fff;
   padding:30px;
@@ -186,9 +220,16 @@ h3{ color:var(--primary); margin-bottom:10px; }
   box-shadow:0 20px 40px rgba(0,0,0,.08);
   transition:.3s;
 }
-.vm-card:hover{ transform:translateY(-6px); }
-.vm-card.accent{ border-top:6px solid var(--accent); }
-.vm-card p,.vm-card li{ color:var(--muted); }
+.vm-card:hover{
+  transform:translateY(-6px);
+}
+.vm-card.accent{
+  border-top:6px solid var(--accent);
+}
+.vm-card p,
+.vm-card li{
+  color:var(--muted);
+}
 
 /* ================= GALLERY ================= */
 .gallery-grid{
@@ -215,6 +256,7 @@ h3{ color:var(--primary); margin-bottom:10px; }
   gap:15px;
   margin-top:25px;
 }
+
 .btn{
   background:var(--primary);
   color:#fff;
@@ -256,12 +298,13 @@ body.dark{
 }
 body.dark .nav{
   background:rgba(2,6,23,.9);
-  box-shadow:0 10px 30px rgba(0,0,0,.6);
 }
 body.dark .nav.scrolled{
   background:rgba(2,6,23,.85);
 }
-body.dark nav a{ color:#e5e7eb; }
+body.dark nav a{
+  color:#e5e7eb;
+}
 body.dark .section,
 body.dark .alt,
 body.dark .vm-section{
@@ -272,13 +315,19 @@ body.dark .vm-card{
   background:#020617;
   box-shadow:0 15px 40px rgba(0,0,0,.6);
 }
-body.dark footer{ background:#000; }
+body.dark footer{
+  background:#000;
+}
 
 /* ================= RESPONSIVE ================= */
-.hamburger{ display:none; }
+.hamburger{
+  display:none;
+}
 
 @media(max-width:768px){
-  nav ul{ display:none; }
+  nav ul{
+    display:none;
+  }
   .hamburger{
     display:flex;
     flex-direction:column;
@@ -290,30 +339,16 @@ body.dark footer{ background:#000; }
     height:3px;
     background:#333;
   }
-  .hero h1{ font-size:30px; }
-  .hero-logo{ max-width:90px; }
-  .vm-grid{ grid-template-columns:1fr; }
-}
-/* FORCE NAVBAR SCROLL EFFECT (MOBILE VISIBLE) */
-.nav.scrolled{
-  padding:6px 18px !important;
-  background:rgba(255,255,255,.9);
-}
 
-body.dark .nav.scrolled{
-  background:rgba(2,6,23,.9);
-}
-@media(max-width:768px){
-  .hero-logo{
-    max-width:160px;        /* Pas untuk HP */
+  .hero h1{
+    font-size:30px;
   }
-}
-@keyframes floatLogo{
-  0%{ transform:translateY(0); }
-  50%{ transform:translateY(-8px); }
-  100%{ transform:translateY(0); }
-}
 
-.hero-logo{
-  animation:floatLogo 5s ease-in-out infinite;
+  .hero{
+    background-size:260px;   /* LOGO TENGAH MOBILE */
+  }
+
+  .vm-grid{
+    grid-template-columns:1fr;
+  }
 }
