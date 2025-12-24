@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>PT Alsinar Indo Abadi | General Supplier & Contractor</title>
 
   <!-- SEO -->
-  <meta name="description" content="PT Alsinar Indo Abadi adalah General Supplier & Contractor terpercaya di Indonesia.">
+  <meta name="description" content="PT Alsinar Indo Abadi adalah perusahaan General Supplier & Contractor terpercaya di Indonesia.">
   <meta name="keywords" content="General Supplier, Contractor, Scrap Iron, Catering Industri">
   <meta name="author" content="PT Alsinar Indo Abadi">
 
@@ -16,10 +17,10 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- ================= NAVBAR ================= -->
 <header class="nav">
   <div class="brand">
-    <img src="images/LOGOALSINAR.png" alt="Logo Alsinar" class="nav-logo">
+    <img src="images/LOGOALSINAR.png" alt="Logo PT Alsinar Indo Abadi" class="nav-logo">
     <span>PT ALSINAR INDO ABADI</span>
   </div>
 
@@ -35,17 +36,21 @@
 
   <button class="lang-btn" onclick="setLang('id')">ID</button>
   <button class="lang-btn" onclick="setLang('en')">EN</button>
-  <button id="darkToggle" class="lang-btn">🌙</button>
+
   <div class="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     HERO (PENTING: TIDAK ADA .container DI SINI)
+===================================================== -->
 <section id="home" class="hero reveal">
-  <img src="images/LOGOALSINAR.png" class="hero-logo" alt="Logo Alsinar">
+  <img src="images/LOGOALSINAR.png" class="hero-logo" alt="Logo PT Alsinar Indo Abadi">
+
   <h1 data-i18n="hero_title">PT ALSINAR INDO ABADI</h1>
   <p data-i18n="hero_subtitle">General Supplier & Contractor Terpercaya</p>
+
   <a href="#contact" class="cta" data-i18n="hero_cta">Hubungi Kami</a>
 </section>
 
@@ -55,10 +60,10 @@
     <h2 data-i18n="services_title">Layanan Kami</h2>
 
     <div class="services-grid">
-      <div class="service-card" data-i18n="service_1">General Supplier</div>
-      <div class="service-card" data-i18n="service_2">Kontraktor & Konstruksi</div>
-      <div class="service-card" data-i18n="service_3">Manajemen Scrap Iron</div>
-      <div class="service-card" data-i18n="service_4">Catering Industri</div>
+      <div class="service-card">General Supplier</div>
+      <div class="service-card">Kontraktor & Konstruksi</div>
+      <div class="service-card">Manajemen Scrap Iron</div>
+      <div class="service-card">Catering Industri</div>
     </div>
   </div>
 </section>
@@ -67,38 +72,28 @@
 <section id="about" class="section alt reveal">
   <div class="container narrow">
     <h2 data-i18n="about_title">Tentang Perusahaan</h2>
+
     <p data-i18n="about_text">
-      PT Alsinar Indo Abadi adalah perusahaan yang berkomitmen memberikan layanan
-      profesional, berkualitas tinggi, dan berkelanjutan di berbagai sektor industri.
+      PT Alsinar Indo Abadi adalah perusahaan yang berkomitmen memberikan layanan profesional,
+      berkualitas tinggi, dan berkelanjutan di berbagai sektor industri.
     </p>
+
+    <h3>Visi</h3>
+    <p>
+      Menjadi perusahaan penyedia layanan terpadu yang terpercaya, profesional,
+      dan unggul dalam mendukung kebutuhan industri nasional.
+    </p>
+
+    <h3>Misi</h3>
+    <ul>
+      <li>Menyediakan layanan General Supplier & Contractor berkualitas tinggi</li>
+      <li>Mengutamakan kepuasan klien dengan solusi efisien dan inovatif</li>
+      <li>Membangun hubungan jangka panjang berbasis integritas</li>
+      <li>Mendukung praktik bisnis berkelanjutan</li>
+    </ul>
   </div>
 </section>
-<!-- ================= VISION & MISSION ================= -->
-<section id="vision-mission" class="section reveal">
-  <div class="container narrow">
-    <h2>Visi & Misi</h2>
 
-    <div class="vm-grid">
-      <div class="vm-box">
-        <h3>Visi</h3>
-        <p>
-          Menjadi perusahaan penyedia layanan terpadu yang terpercaya, profesional,
-          dan unggul dalam mendukung kebutuhan industri nasional.
-        </p>
-      </div>
-
-      <div class="vm-box">
-        <h3>Misi</h3>
-        <ul>
-          <li>Memberikan layanan General Supplier & Contractor yang berkualitas tinggi.</li>
-          <li>Mengutamakan kepuasan klien melalui solusi yang efisien dan inovatif.</li>
-          <li>Membangun hubungan jangka panjang yang berlandaskan integritas.</li>
-          <li>Mendukung praktik bisnis berkelanjutan dan ramah lingkungan.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 <!-- ================= GALLERY ================= -->
 <section id="gallery" class="section reveal">
   <div class="container">
@@ -108,7 +103,6 @@
       <img src="images/gallery/proyek1.jpg" alt="Proyek 1">
       <img src="images/gallery/proyek2.jpg" alt="Proyek 2">
       <img src="images/gallery/proyek3.jpg" alt="Proyek 3">
-      <img src="images/gallery/proyek4.jpg" alt="Proyek 4">
     </div>
   </div>
 </section>
@@ -123,88 +117,15 @@
       <a href="https://wa.me/6281346860886" class="btn">WhatsApp</a>
       <a href="mailto:info@alsinar.com" class="btn outline">Email</a>
     </div>
-
-    <!-- MAPS (GANTI DENGAN EMBED ASLI) -->
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!"
-      width="100%"
-      height="300"
-      style="border:0;"
-      allowfullscreen
-      loading="lazy">
-    </iframe>
   </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer>
-  <p>© 2025 PT Alsinar Indo Abadi. All Rights Reserved.</p>
+  <p>© 2025 PT Alsinar Indo Abadi. All rights reserved.</p>
 </footer>
 
-<!-- ================= JS ================= -->
-<script>
-/* HAMBURGER */
-function toggleMenu(){
-  const menu = document.getElementById("menu");
-  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-}
-
-/* REVEAL ANIMATION */
-document.addEventListener("DOMContentLoaded", () => {
-  const reveals = document.querySelectorAll(".reveal");
-
-  function revealOnScroll(){
-    const windowHeight = window.innerHeight;
-    reveals.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if(top < windowHeight - 100){
-        el.classList.add("active");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll();
-});
-
-/* MULTI LANGUAGE */
-const translations = {
-  id: {
-    hero_title: "PT ALSINAR INDO ABADI",
-    hero_subtitle: "General Supplier & Contractor Terpercaya",
-    hero_cta: "Hubungi Kami",
-    services_title: "Layanan Kami",
-    service_1: "General Supplier",
-    service_2: "Kontraktor & Konstruksi",
-    service_3: "Manajemen Scrap Iron",
-    service_4: "Catering Industri",
-    about_title: "Tentang Perusahaan",
-    about_text: "PT Alsinar Indo Abadi adalah perusahaan yang berkomitmen memberikan layanan profesional dan berkualitas.",
-    contact_title: "Kontak Kami",
-    contact_text: "Siap menjadi mitra strategis bisnis Anda."
-  },
-  en: {
-    hero_title: "PT ALSINAR INDO ABADI",
-    hero_subtitle: "Trusted General Supplier & Contractor",
-    hero_cta: "Contact Us",
-    services_title: "Our Services",
-    service_1: "General Supplier",
-    service_2: "Contractor & Construction",
-    service_3: "Scrap Iron Management",
-    service_4: "Industrial Catering",
-    about_title: "About Company",
-    about_text: "PT Alsinar Indo Abadi delivers professional and sustainable industrial services.",
-    contact_title: "Contact Us",
-    contact_text: "Ready to be your strategic business partner."
-  }
-};
-
-function setLang(lang){
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    el.textContent = translations[lang][el.dataset.i18n];
-  });
-}
-</script>
-
+<!-- JS -->
+<script src="script.js"></script>
 </body>
 </html>
