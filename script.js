@@ -1,7 +1,3 @@
-function toggleMenu() {
-  document.getElementById("menu").classList.toggle("active");
-}
-
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
