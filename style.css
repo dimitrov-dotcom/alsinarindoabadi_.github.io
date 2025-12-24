@@ -177,3 +177,32 @@ footer{
 .hero-logo{
   filter:drop-shadow(0 8px 20px rgba(0,0,0,.25));
 }
+/* VISION & MISSION */
+.vm-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  margin-top:30px;
+}
+
+.vm-box{
+  background:#fff;
+  padding:25px;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.vm-box h3{
+  margin-bottom:10px;
+  color:#0a2e57;
+}
+
+.vm-box ul{
+  padding-left:18px;
+}
+
+@media(max-width:768px){
+  .vm-grid{
+    grid-template-columns:1fr;
+  }
+}
