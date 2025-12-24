@@ -1,11 +1,18 @@
-function toggleMenu(){
-  document.getElementById("menu").classList.toggle("show");
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
 }
 
-window.addEventListener("scroll", () => {
-  document.querySelectorAll(".reveal").forEach(el => {
-    if(el.getBoundingClientRect().top < window.innerHeight - 100){
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
       el.classList.add("active");
     }
   });
-});
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
