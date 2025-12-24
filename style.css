@@ -281,3 +281,28 @@ body.dark .nav.scrolled{
   background:rgba(2,6,23,.75);
   box-shadow:0 8px 24px rgba(0,0,0,.4);
 }
+/* ===== LANGUAGE SWITCH ===== */
+.lang-switch {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.lang-btn {
+  font-size: 20px;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: 0.3s;
+}
+
+.lang-btn:hover {
+  background: #f0f0f0;
+}
+
+.lang-btn.active {
+  border-color: #0d6efd;
+  background: #e7f1ff;
+}
