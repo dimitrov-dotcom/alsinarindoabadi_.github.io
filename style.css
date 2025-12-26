@@ -746,3 +746,17 @@ body.dark .nav.scrolled{
 .service-card.contractor .flip-back{
   background: linear-gradient(135deg,#d6b15e,#b8963f);
 }
+/* ===============================
+   CENTER VISI & MISI (FINAL FIX)
+================================ */
+.vm-card .flip-front,
+.vm-card .flip-back{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.vm-card h3{
+  margin-bottom: 10px;
+}
