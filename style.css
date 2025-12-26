@@ -850,3 +850,77 @@ body.dark .nav.scrolled{
     font-size: 22px;
   }
 }
+/* ================= GALERI SLIDER ================= */
+.gallery-wrapper{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gallery-slider{
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallery-track{
+  display: flex;
+  gap: 16px;
+  transition: transform 0.6s ease;
+}
+
+.gallery-track img{
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+/* Glow emas */
+.gallery-track img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(214,177,94,.7);
+}
+
+/* Tombol panah */
+.gallery-btn{
+  background: #0b2e59;
+  color: #fff;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 2;
+}
+.gallery-btn:hover{
+  background: #d6b15e;
+  color: #111;
+}
+
+/* ================= LIGHTBOX ================= */
+#lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#lightbox img{
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+#lightbox .close{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+}
