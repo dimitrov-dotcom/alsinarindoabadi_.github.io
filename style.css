@@ -790,3 +790,22 @@ body.dark .nav.scrolled{
     height: 160px;
   }
 }
+.gallery-slider{
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallery-track{
+  display: flex;
+  gap: 16px;
+  transition: transform 0.8s ease;
+  will-change: transform;
+}
+
+.gallery-track img{
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}

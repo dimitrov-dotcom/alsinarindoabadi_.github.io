@@ -160,22 +160,40 @@ function setLang(lang) {
 document.addEventListener("DOMContentLoaded", () => {
   setLang(localStorage.getItem("lang") || "id");
 });
-/* ===============================
-   GALERI AUTO SLIDE 3 DETIK
-================================ */
-const track = document.querySelector(".gallery-track");
 
-if(track){
+/* ==================================
+   GALERI AUTO SLIDE 3 DETIK (FIX)
+================================== */
+window.addEventListener("load", () => {
+  const track = document.querySelector(".gallery-track");
+  if (!track) return;
+
+  const images = Array.from(track.children);
+  if (images.length < 2) return;
+
+  // Clone images supaya bisa loop
+  images.forEach(img => {
+    const clone = img.cloneNode(true);
+    track.appendChild(clone);
+  });
+
   let index = 0;
-  const images = track.children;
-  const total = images.length;
-  const slideWidth = images[0].offsetWidth + 16;
+  const gap = 16;
 
   setInterval(() => {
+    const imgWidth = images[0].getBoundingClientRect().width + gap;
     index++;
-    if(index > total - 1){
-      index = 0;
+
+    track.style.transition = "transform 0.8s ease";
+    track.style.transform = `translateX(-${index * imgWidth}px)`;
+
+    // Reset tanpa terlihat patah
+    if (index >= images.length) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        track.style.transform = "translateX(0)";
+        index = 0;
+      }, 850);
     }
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
   }, 3000);
-}
+});
