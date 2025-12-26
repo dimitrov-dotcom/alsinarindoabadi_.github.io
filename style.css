@@ -457,3 +457,10 @@ body.dark .nav.scrolled{
   opacity: 1;
   transform: translateX(0);
 }
+/* FIX FINAL: HERO / HOME HARUS SELALU TAMPIL */
+.hero,
+#home{
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
