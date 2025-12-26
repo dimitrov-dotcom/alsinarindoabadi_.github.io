@@ -162,32 +162,34 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ==================================
-   GALERI AUTO SLIDE 3 DETIK (FIX)
+   GALERI AUTO + PANAH (FINAL)
 ================================== */
 window.addEventListener("load", () => {
   const track = document.querySelector(".gallery-track");
+  const prev = document.querySelector(".gallery-btn.prev");
+  const next = document.querySelector(".gallery-btn.next");
+
   if (!track) return;
 
   const images = Array.from(track.children);
   if (images.length < 2) return;
 
-  // Clone images supaya bisa loop
+  // Clone images supaya loop
   images.forEach(img => {
-    const clone = img.cloneNode(true);
-    track.appendChild(clone);
+    track.appendChild(img.cloneNode(true));
   });
 
   let index = 0;
   const gap = 16;
+  let interval;
 
-  setInterval(() => {
+  const slide = (dir = 1) => {
     const imgWidth = images[0].getBoundingClientRect().width + gap;
-    index++;
+    index += dir;
 
     track.style.transition = "transform 0.8s ease";
     track.style.transform = `translateX(-${index * imgWidth}px)`;
 
-    // Reset tanpa terlihat patah
     if (index >= images.length) {
       setTimeout(() => {
         track.style.transition = "none";
@@ -195,5 +197,32 @@ window.addEventListener("load", () => {
         index = 0;
       }, 850);
     }
-  }, 3000);
+
+    if (index < 0) {
+      index = images.length - 1;
+      track.style.transition = "none";
+      track.style.transform = `translateX(-${index * imgWidth}px)`;
+    }
+  };
+
+  const startAuto = () => {
+    interval = setInterval(() => slide(1), 3000);
+  };
+
+  const resetAuto = () => {
+    clearInterval(interval);
+    startAuto();
+  };
+
+  next.addEventListener("click", () => {
+    slide(1);
+    resetAuto();
+  });
+
+  prev.addEventListener("click", () => {
+    slide(-1);
+    resetAuto();
+  });
+
+  startAuto();
 });
