@@ -420,3 +420,25 @@ body.dark .nav.scrolled{
   opacity:1 !important;
   transform:none !important;
 }
+#services h2{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.about-header h2{
+  text-align: center;
+}
+#gallery h2{
+  text-align: center;
+  margin-bottom: 40px;
+}
+#services h2::after,
+.about-header h2::after,
+#gallery h2::after{
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #d6b15e;
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
