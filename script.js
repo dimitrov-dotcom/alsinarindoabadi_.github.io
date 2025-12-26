@@ -64,6 +64,7 @@ window.addEventListener("load", revealOnScroll);
 /* =====================================================
    MULTI LANGUAGE (ID / EN + FLAG)
 ===================================================== */
+
 const translations = {
   id: {
     nav_home: "Home",
@@ -83,12 +84,11 @@ const translations = {
 
     about_title: "Tentang Perusahaan",
     about_desc:
-     about_desc:
-  "PT Alsinar Indo Abadi merupakan perusahaan yang bergerak di bidang General Supplier dan Contractor, yang berkomitmen untuk memberikan layanan terbaik dengan standar profesionalisme, kualitas, dan integritas yang tinggi. Sejak didirikan, perusahaan terus berkembang dengan mengedepankan prinsip kepercayaan, ketepatan waktu, dan kepuasan pelanggan. Didukung oleh sumber daya manusia yang berpengalaman, manajemen yang profesional, serta jaringan mitra kerja yang solid, PT Alsinar Indo Abadi siap menjadi mitra strategis yang andal dalam mendukung pertumbuhan industri nasional dan pembangunan yang berkelanjutan.",
+      "PT Alsinar Indo Abadi merupakan perusahaan yang bergerak di bidang General Supplier dan Contractor, yang berkomitmen untuk memberikan layanan terbaik dengan standar profesionalisme, kualitas, dan integritas yang tinggi. Sejak didirikan, perusahaan terus berkembang dengan mengedepankan prinsip kepercayaan, ketepatan waktu, dan kepuasan pelanggan. Didukung oleh sumber daya manusia yang berpengalaman, manajemen yang profesional, serta jaringan mitra kerja yang solid, PT Alsinar Indo Abadi siap menjadi mitra strategis yang andal dalam mendukung pertumbuhan industri nasional dan pembangunan yang berkelanjutan.",
+
     vision_title: "Visi",
     vision_desc:
-      vision_desc:
-  "Menjadi perusahaan General Supplier dan Contractor terkemuka di Indonesia yang terpercaya, profesional, dan berdaya saing tinggi, dengan komitmen memberikan layanan terpadu yang berkualitas, tepat waktu, dan berkelanjutan, serta berperan aktif dalam mendukung pertumbuhan industri nasional.",
+      "Menjadi perusahaan General Supplier dan Contractor terkemuka di Indonesia yang terpercaya, profesional, dan berdaya saing tinggi, dengan komitmen memberikan layanan terpadu yang berkualitas, tepat waktu, dan berkelanjutan.",
 
     mission_title: "Misi",
     mission_1: "Memberikan layanan General Supplier & Contractor yang berkualitas",
