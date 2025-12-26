@@ -442,3 +442,18 @@ body.dark .nav.scrolled{
   margin: 12px auto 0;
   border-radius: 4px;
 }
+/* FIX: SECTION HARUS SELALU TAMPIL */
+.section{
+  opacity: 1 !important;
+  transform: none !important;
+}
+.reveal-left,
+.reveal-right{
+  opacity: 0;
+}
+
+.reveal-left.active,
+.reveal-right.active{
+  opacity: 1;
+  transform: translateX(0);
+}
