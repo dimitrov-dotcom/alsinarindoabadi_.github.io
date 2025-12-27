@@ -1011,3 +1011,11 @@ body.dark .nav.scrolled{
   box-shadow: 0 0 16px rgba(214,177,94,.45);
   transform: translateY(-2px);
 }
+.trust-badge-wrap{
+  width: 100%;
+  display: flex;
+  justify-content: center; /* ⬅️ PAKSA KE TENGAH */
+}
+.trust-badge{
+  display: inline-flex;
+}
