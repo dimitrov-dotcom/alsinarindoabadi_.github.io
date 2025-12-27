@@ -208,6 +208,11 @@ nav a{
   border-radius:14px;
   flex-shrink:0;
   cursor:pointer;
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.gallery-track img:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 25px rgba(214,177,94,.6);
 }
 .gallery-btn{
   position:absolute;
@@ -251,6 +256,7 @@ nav a{
 .trust-badge-wrap{
   display:flex;
   justify-content:center;
+  margin-bottom:20px;
 }
 .trust-badge{
   padding:8px 18px;
@@ -263,21 +269,24 @@ nav a{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:24px;
-  margin-top:30px;
+  max-width:1000px;
+  margin:0 auto;
 }
 .trust-item{
   background:#fff;
-  padding:26px;
+  padding:24px;
   border-radius:16px;
   text-align:center;
-  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
-.trust-main{grid-column:1/-1}
+.trust-item.trust-full{
+  grid-column:1 / -1;
+}
 .trust-icon{
-  font-size:36px;
+  font-size:34px;
   width:56px;
   height:56px;
-  margin:0 auto 12px;
+  margin:0 auto 10px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -285,59 +294,15 @@ nav a{
   color:#fff;
   border-radius:14px;
 }
-/* === WHATSAPP FIX === */
 .trust-contact{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;            /* JARAK AMAN */
-  margin-top: 6px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
 }
-
 .trust-phone{
-  font-weight: 600;
-  color: #0b2e59;
-  margin: 0;            /* HILANGKAN DEFAULT <p> */
+  font-weight:600;
 }
-
-.map-btn{
-  font-size: 14px;
-  padding: 10px 18px;
-}
-/* GRID LEGALITAS */
-.trust-grid{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* ITEM DEFAULT */
-.trust-item{
-  background:#fff;
-  padding:24px;
-  border-radius:16px;
-  text-align:center;
-  box-shadow:0 10px 30px rgba(2,6,23,.06);
-}
-
-/* FULL WIDTH (NAMA & WHATSAPP) */
-.trust-item.trust-full{
-  grid-column: 1 / -1;
-}
-
-/* RESPONSIVE MOBILE */
-@media(max-width:768px){
-  .trust-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .trust-item.trust-full{
-    grid-column: auto;
-  }
-}
-.map-btn{margin-top:10px}
 
 /* ================= MAP ================= */
 .map-wrapper{
@@ -361,6 +326,31 @@ footer{
   padding:30px;
 }
 
+/* ================= LIGHTBOX ================= */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.lightbox img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:14px;
+  box-shadow:0 25px 60px rgba(0,0,0,.6);
+}
+.lightbox-close{
+  position:absolute;
+  top:20px;
+  right:28px;
+  font-size:36px;
+  color:#fff;
+  cursor:pointer;
+}
+
 /* ================= RESPONSIVE ================= */
 @media(max-width:768px){
   nav ul{display:none}
@@ -368,61 +358,3 @@ footer{
   .trust-grid{grid-template-columns:1fr}
   .hero h1{font-size:30px}
 }
-.trust-full{
-  grid-column: 1 / -1;
-}
-/* ===== TRUST GRID FIX FINAL ===== */
-.trust-grid{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-top: 30px;
-}
-
-/* Full width card */
-.trust-full{
-  grid-column: 1 / -1;
-}
-
-/* Card */
-.trust-item{
-  background:#fff;
-  padding:24px;
-  border-radius:16px;
-  text-align:center;
-  box-shadow:0 10px 30px rgba(2,6,23,.08);
-}
-
-/* Icon */
-.trust-icon{
-  font-size:34px;
-  width:56px;
-  height:56px;
-  margin:0 auto 10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(135deg,#0b2e59,#0f3d73);
-  color:#fff;
-  border-radius:14px;
-}
-
-/* WhatsApp */
-.trust-contact{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:12px;
-  margin-top:8px;
-}
-
-.trust-phone{
-  font-weight:600;
-  margin:0;
-}
-
-/* Mobile */
-@media(max-width:768px){
-  .trust-grid{
-    grid-template-columns:1fr;
-  }
