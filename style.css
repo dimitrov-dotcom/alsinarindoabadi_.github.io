@@ -78,7 +78,7 @@ nav a{
   background:linear-gradient(135deg,var(--primary),var(--secondary));
   padding:40px 20px;
 }
-.hero-logo{max-width:420px;margin-bottom:20px}
+.hero-logo{max-width:720px;margin-bottom:20px}
 .hero h1{font-size:42px}
 .hero p{margin:10px 0 24px}
 .cta{
