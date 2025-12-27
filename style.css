@@ -260,7 +260,7 @@ nav a{
   background:linear-gradient(135deg,#0d3b66,#1d4ed8);
 }
 .vm-card.mission .flip-back{
-  background:linear-gradient(135deg,#1d4ed8,#0d3b66);
+  background:linear-gradient(135deg,#fff,#0d3b66);
 }
 
 /* ================= GALLERY ================= */
