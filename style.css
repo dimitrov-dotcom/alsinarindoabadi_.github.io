@@ -285,6 +285,39 @@ nav a{
   color:#fff;
   border-radius:14px;
 }
+/* GRID LEGALITAS */
+.trust-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ITEM DEFAULT */
+.trust-item{
+  background:#fff;
+  padding:24px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(2,6,23,.06);
+}
+
+/* FULL WIDTH (NAMA & WHATSAPP) */
+.trust-item.trust-full{
+  grid-column: 1 / -1;
+}
+
+/* RESPONSIVE MOBILE */
+@media(max-width:768px){
+  .trust-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .trust-item.trust-full{
+    grid-column: auto;
+  }
+}
 .map-btn{margin-top:10px}
 
 /* ================= MAP ================= */
