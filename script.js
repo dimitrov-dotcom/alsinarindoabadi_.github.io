@@ -24,22 +24,6 @@ function toggleMenu() {
 }
 
 /* =====================================================
-   LIGHTBOX GALLERY
-===================================================== */
-document.querySelectorAll(".gallery-grid img").forEach(img => {
-  img.addEventListener("click", () => {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    lightboxImg.src = img.src;
-    lightbox.style.display = "flex";
-  });
-});
-
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-}
-
-/* =====================================================
    SCROLL REVEAL (HALUS)
 ===================================================== */
 const reveals = document.querySelectorAll(
@@ -79,7 +63,7 @@ const translations = {
 
     services_title: "Layanan Kami",
     service_1: "General Supplier",
-    service_2: "Manajemen Scrap Iron (Besi Tua)",
+wastalkingboutthat    service_2: "Manajemen Scrap Iron (Besi Tua)",
     service_3: "Kontraktor dan Konstruksi",
 
     about_title: "Tentang Perusahaan",
@@ -229,4 +213,27 @@ window.addEventListener("load", () => {
   });
 
   startAuto();
+});
+is
+/* =====================================================
+   LIGHTBOX GALLERY (FINAL FIX)
+===================================================== */
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+document.querySelectorAll(".gallery-track img").forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+function closeLightbox() {
+  lightbox.style.display = "none";
+  lightboxImg.src = "";
+}
+
+// Tutup pakai ESC
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeLightbox();
 });
