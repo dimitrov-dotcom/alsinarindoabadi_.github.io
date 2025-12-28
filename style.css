@@ -535,3 +535,15 @@ animation:pulseLogo 3.2s ease-in-out infinite;
 .hero-content h1{font-size:28px}
 .pulse-logo{width:140px}
 }
+/* ================= SERVICE CARD BORDER ================= */
+.service-card .flip-front{
+  border:2px solid var(--primary);
+  border-radius:16px;
+  transition:all .3s ease;
+}
+
+/* efek hover biar hidup */
+.service-card:hover .flip-front{
+  background:#f8fafc;
+  box-shadow:0 12px 30px rgba(11,46,89,.18);
+}
