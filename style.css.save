@@ -131,11 +131,11 @@ nav a{
   text-align:center;
 }
 .flip-front{
-  background:#E3E3E3;
+  background:#;
 }
 .flip-back{
   background:linear-gradient(135deg,var(--primary),var(--secondary));
-  color:#1A2A80;
+  color:#fff;
   transform:rotateY(180deg);
 }
 
@@ -260,7 +260,7 @@ nav a{
   background:linear-gradient(135deg,#0d3b66,#1d4ed8);
 }
 .vm-card.mission .flip-back{
-  background:linear-gradient(1d4ed8,#,#E3E3E3);
+  background:linear-gradient(135deg,#fff,#0d3b66);
 }
 
 /* ================= GALLERY ================= */
